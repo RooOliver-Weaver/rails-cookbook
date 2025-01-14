@@ -1,9 +1,56 @@
-<h1><%= @category.name %></h1>
-
-<% @bookmarks.each do |bookmark| %>
-  <div>
-    <strong><%= bookmark.recipe.name %></strong>: <%= bookmark.comment %>
+<div class="banner">
+  <div class="gradient"></div>
+  <%= image_tag "mainpage-banner.jpg", class: "mainpage-banner-img" %>
+  <div class="banner-content">
+    <h1><%= @category.name %></h1>
+    <p>See all the delicious meals below</p>
   </div>
-<% end %>
+</div>
 
-<%= link_to "Delete", category_path(@category), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+<div class="container">
+  <div class="list">
+    <% @bookmarks.each do |bookmark| %>
+      <div class="card">
+        <h3><strong><%= bookmark.recipe.name %></strong></h3>
+        <p><%= bookmark.comment %></p>
+        <p><%= bookmark.recipe.description %></p>
+        <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= link_to 'Add Bookmark', new_category_bookmark_path(@category), class: "button" %>
+<h2>Reviews</h2>
+<div class="reviews-container">
+  <div class="reviews-list">
+  <% @reviews.each do |review| %>
+    <%  if review.valid? %>
+      <div class="review">
+        <p><%= '⭐️' * review.rating %>:
+        <%= review.content %>
+        <%# <% raise %>
+        <%# <%= link_to "Delete", review_path(review), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></p>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+  <div class="form">
+    <%= simple_form_for [@category, @category.reviews.new] do |f| %>
+      <div class="star-rating">
+        <% 5.downto(1) do |i| %>
+          <%= f.radio_button :rating, i, id: "star#{i}" %>
+          <label for="star<%= i %>" title="<%= i %> stars">
+          &#9733;
+          </label>
+        <% end %>
+      </div>
+      <%= f.input :content, as: :text, label: "Your Review" %>
+      <%# <%= f.input :rating, as: :select, collection: 0..5, label: "Rating (0 to 5)" %>
+      <%= f.button :submit, "Submit Review", class: "button-submit" %>
+    <% end %>
+  </div>
+</div>
+<%# <%= link_to "Add a Review", new_category_review_path(@category) %>
+<%# <%= link_to "See All Categories", categories_path, class: "button" %>
+<%# <%= link_to "Delete", category_path(@category), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>

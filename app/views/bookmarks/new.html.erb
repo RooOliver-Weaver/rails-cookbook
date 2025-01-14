@@ -1,0 +1,19 @@
+<div class="banner">
+  <div class="gradient"></div>
+  <%= image_tag "mainpage-banner.jpg", class: "mainpage-banner-img" %>
+  <div class="banner-content">
+    <h1>Add a New Recipe to <%= @category.name %></h1>
+    <p>Add something tasty to your collection.</p>
+  </div>
+</div>
+
+<div class="new-form">
+  <%= simple_form_for [@category, @bookmark] do |f| %>
+    <div class="form-item"><%= f.input :recipe_id, collection: Recipe.all, label_method: :name, value_method: :id, prompt: 'Select a Recipe', as: :select %></div>
+    <%= f.input :comment %>
+    <%= f.button :submit, 'Add Recipe', class: 'btn btn-primary', class: "button-create" %>
+  <% end %>
+</div>
+
+<%= link_to "Back to #{@category.name}", category_path(@category), class: "button" %>
+<%# <%= link_to "See All", categories_path %>

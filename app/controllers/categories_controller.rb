@@ -6,6 +6,8 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @bookmarks = @category.bookmarks.includes(:recipe)
+    @reviews = @category.reviews
+    @review = Review.new
   end
 
   def new
@@ -22,6 +24,7 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
+    raise
     @category = Category.find(params[:id])
     @category.destroy
     redirect_to categories_path, status: :see_other

@@ -25,26 +25,26 @@ categories = Category.create!([
 
 # Seed Recipes
 recipes = Recipe.create!([
-  { name: "Chocolate Cake", description: "Rich and moist chocolate cake.", image_url: "https://example.com/chocolate_cake.jpg", rating: 4.8 },
-  { name: "Caesar Salad", description: "Classic Caesar salad with creamy dressing.", image_url: "https://example.com/caesar_salad.jpg", rating: 4.5 },
-  { name: "Spaghetti Carbonara", description: "Traditional Italian pasta dish.", image_url: "https://example.com/spaghetti_carbonara.jpg", rating: 4.7 },
-  { name: "Smoothie Bowl", description: "Healthy fruit smoothie bowl topped with granola.", image_url: "https://example.com/smoothie_bowl.jpg", rating: 4.9 },
-  { name: "Margherita Pizza", description: "Authentic pizza with tomatoes, mozzarella, and basil.", image_url: "https://example.com/margherita_pizza.jpg", rating: 4.6 },
-  { name: "Pancakes", description: "Fluffy pancakes with syrup.", image_url: "https://example.com/pancakes.jpg", rating: 4.7 },
-  { name: "Beef Tacos", description: "Spicy beef tacos with fresh toppings.", image_url: "https://example.com/beef_tacos.jpg", rating: 4.8 },
-  { name: "Vegan Buddha Bowl", description: "Nourishing bowl with quinoa and roasted vegetables.", image_url: "https://example.com/buddha_bowl.jpg", rating: 4.9 },
-  { name: "Chicken Curry", description: "Creamy and spicy chicken curry.", image_url: "https://example.com/chicken_curry.jpg", rating: 4.8 },
-  { name: "Tomato Soup", description: "Comforting tomato soup with basil.", image_url: "https://example.com/tomato_soup.jpg", rating: 4.5 },
-  { name: "Garlic Bread", description: "Crispy garlic bread with butter.", image_url: "https://example.com/garlic_bread.jpg", rating: 4.6 },
-  { name: "Avocado Toast", description: "Simple and healthy avocado toast.", image_url: "https://example.com/avocado_toast.jpg", rating: 4.7 },
-  { name: "Grilled Cheese Sandwich", description: "Cheesy and crispy sandwich.", image_url: "https://example.com/grilled_cheese.jpg", rating: 4.8 },
-  { name: "Pumpkin Soup", description: "Creamy pumpkin soup with spices.", image_url: "https://example.com/pumpkin_soup.jpg", rating: 4.7 },
-  { name: "Fruit Salad", description: "Fresh and colorful fruit salad.", image_url: "https://example.com/fruit_salad.jpg", rating: 4.6 },
-  { name: "Lemonade", description: "Refreshing homemade lemonade.", image_url: "https://example.com/lemonade.jpg", rating: 4.5 },
-  { name: "BBQ Ribs", description: "Tender and smoky BBQ ribs.", image_url: "https://example.com/bbq_ribs.jpg", rating: 4.9 },
-  { name: "Shepherd's Pie", description: "Comforting pie with lamb and mashed potatoes.", image_url: "https://example.com/shepherds_pie.jpg", rating: 4.8 },
-  { name: "French Toast", description: "Classic French toast with cinnamon and sugar.", image_url: "https://example.com/french_toast.jpg", rating: 4.7 },
-  { name: "Stuffed Bell Peppers", description: "Bell peppers stuffed with rice and veggies.", image_url: "https://example.com/stuffed_peppers.jpg", rating: 4.6 }
+  { name: "Chocolate Cake", description: "Rich and moist chocolate cake.", image_url: "https://img.freepik.com/free-photo/closeup-tasty-chocolate-cake-with-chocolate-chunks-baking-sheet_1220-6329.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.8 },
+  { name: "Caesar Salad", description: "Classic Caesar salad with creamy dressing.", image_url: "https://img.freepik.com/premium-photo/classic-caesar-salad-with-chicken-sauce-plate-concrete-background-top-view_215990-1553.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.5 },
+  { name: "Spaghetti Carbonara", description: "Traditional Italian pasta dish.", image_url: "https://img.freepik.com/free-photo/homemade-fettuccine-with-savory-carbonara-sauce-generated-by-ai_24640-81731.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.7 },
+  { name: "Smoothie Bowl", description: "Healthy fruit smoothie bowl topped with granola.", image_url: "https://img.freepik.com/free-photo/high-angle-breakfast-dessert-bowl-with-banana-slices-cereal_23-2148417435.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.9 },
+  { name: "Margherita Pizza", description: "Authentic pizza with tomatoes, mozzarella, and basil.", image_url: "https://img.freepik.com/free-photo/top-view-delicious-pizza-with-fresh-cheese_23-2150096953.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.6 },
+  { name: "Pancakes", description: "Fluffy pancakes with syrup.", image_url: "https://img.freepik.com/free-photo/delicious-pancakes-with-fruit-honey_144627-41441.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.7 },
+  { name: "Beef Tacos", description: "Spicy beef tacos with fresh toppings.", image_url: "https://img.freepik.com/free-photo/creative-assortment-tasty-food_23-2148949073.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.8 },
+  { name: "Vegan Buddha Bowl", description: "Nourishing bowl with quinoa and roasted vegetables.", image_url: "https://img.freepik.com/free-photo/flat-lay-delicious-vegetarian-food-bowl_23-2148847450.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.9 },
+  { name: "Chicken Curry", description: "Creamy and spicy chicken curry.", image_url: "https://img.freepik.com/free-photo/chicken-red-curry-black-cup_1150-23928.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.8 },
+  { name: "Tomato Soup", description: "Comforting tomato soup with basil.", image_url: "https://img.freepik.com/free-photo/tomato-soup-crackers-cheese-bell-pepper-side-view_141793-12562.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.5 },
+  { name: "Garlic Bread", description: "Crispy garlic bread with butter.", image_url: "https://img.freepik.com/free-photo/homemade-tasty-bread-with-garlic-cheese-herbs-kitchen-table_1150-47123.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.6 },
+  { name: "Avocado Toast", description: "Simple and healthy avocado toast.", image_url: "https://img.freepik.com/free-photo/toast-with-assortment-vegetables_23-2148381383.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.7 },
+  { name: "Grilled Cheese Sandwich", description: "Cheesy and crispy sandwich.", image_url: "https://img.freepik.com/free-photo/close-up-melted-cheese-sandwich_23-2149286854.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.8 },
+  { name: "Pumpkin Soup", description: "Creamy pumpkin soup with spices.", image_url: "https://img.freepik.com/free-photo/flat-lay-winter-squash-soup-mug-with-croutons_23-2148706328.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.7 },
+  { name: "Fruit Salad", description: "Fresh and colorful fruit salad.", image_url: "https://img.freepik.com/free-photo/fresh-fruit-berry-salad-healthy-eating_114579-20456.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.6 },
+  { name: "Lemonade", description: "Refreshing homemade lemonade.", image_url: "https://img.freepik.com/free-photo/top-view-lemonade-glasses-arrangement_23-2148037116.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.5 },
+  { name: "BBQ Ribs", description: "Tender and smoky BBQ ribs.", image_url: "https://img.freepik.com/free-photo/smoky-ribs-sizzle-open-flame-grill_157027-4190.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.9 },
+  { name: "Shepherd's Pie", description: "Comforting pie with lamb and mashed potatoes.", image_url: "https://img.freepik.com/free-photo/portuguese-traditional-delicious-empadao-dish_23-2149863008.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.8 },
+  { name: "French Toast", description: "Classic French toast with cinnamon and sugar.", image_url: "https://img.freepik.com/free-photo/typical-easter-torrijas-spain_181624-61340.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.7 },
+  { name: "Stuffed Bell Peppers", description: "Bell peppers stuffed with rice and veggies.", image_url: "https://img.freepik.com/free-photo/front-view-cooked-bell-peppers-with-ground-meat-fresh-vegetables-dark-surface-meal-vegetable-food-meat-dolma_140725-74279.jpg?uid=P182328292&ga=GA1.1.902740772.1735809867&semt=ais_hybrid", rating: 4.6 }
 ])
 
 # Seed Bookmarks

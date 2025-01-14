@@ -1,0 +1,11 @@
+<h1>New Review for <%= @category.name %></h1>
+
+<%= simple_form_for [@category, @review] do |f| %>
+  <%= f.input :content, as: :text, label: "Your Review" %>
+  <%= f.input :rating, as: :select, collection: 0..5, label: "Rating (0 to 5)" %>
+  <%= f.button :submit, "Submit Review" %>
+<% end %>
+
+<%= link_to "Delete", review_path(@review), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+<%= link_to "Back to #{@category.name}", class: "btn btn-secondary" %>
+<%= link_to "Back to All Categories", categories_path %>

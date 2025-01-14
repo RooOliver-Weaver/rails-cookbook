@@ -1,7 +1,31 @@
-<h1>Categories</h1>
-
-<% @categories.each do |category|%>
-  <div>
-    <h2><%= link_to category.name, category_path(category) %></h2>
+<div class="banner">
+  <div class="gradient"></div>
+  <%= image_tag "mainpage-banner.jpg", class: "mainpage-banner-img" %>
+  <div class="banner-content">
+    <h1>Welcome to Our Recipe App</h1>
+    <p>Explore delicious categories and save your favorite recipes.</p>
   </div>
-<% end %>
+</div>
+
+<div class="container">
+  <div class="list">
+    <% @categories.each do |category| %>
+      <%= link_to category_path(category), class: "link" do %>
+        <div class="card">
+          <div class="gradient"></div>
+          <% if category.bookmarks.exists? %>
+            <% first_bookmark = category.bookmarks.first %>
+              <% if first_bookmark.recipe.present? %>
+                <%= image_tag first_bookmark.recipe.image_url, class: "card-image" %>
+              <% else %>
+                <%= image_tag "placeholder.png", class: "card-image" %> <!-- Fallback image -->
+              <% end %>
+            <% end %>
+            <div class="card-contents">
+          <h2><%= category.name %></h2></div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+<%= link_to "Create New Category", new_category_path,  class: "button" %>

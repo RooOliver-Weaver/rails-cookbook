@@ -1,6 +1,16 @@
-<h1>Add a New Category</h1>
+<div class="banner">
+  <div class="gradient"></div>
+  <%= image_tag "mainpage-banner.jpg", class: "mainpage-banner-img" %>
+  <div class="banner-content">
+    <h1>Add a New Category</h1>
+    <p>Think we've missed something, add it below.</p>
+  </div>
+</div>
 
+<div class="new-form">
 <%= simple_form_for @category do |f| %>
-  <%= f.input :name, label: 'Category Name' %>
-  <%= f.submit 'Create Category' %>
+  <%= f.input :name, label: 'Category Name:  ' %>
+  <%= f.submit 'Create Category', class: "button-create" %>
 <% end %>
+</div>
+<%# <%= link_to "Back to All Categories", categories_path %>
