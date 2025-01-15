@@ -1,26 +1,30 @@
 <div class="banner">
   <div class="gradient"></div>
-  <%= image_tag "mainpage-banner.jpg", class: "mainpage-banner-img" %>
+  <%= image_tag "banner1.jpg", class: "mainpage-banner-img" %>
   <div class="banner-content">
-    <h1>Welcome to Our Recipe App</h1>
-    <p>Explore delicious categories and save your favorite recipes.</p>
+    <h1>The Alchemist's Cookbook</h1>
+    <p>Craft Your Own Culinary Magic, One Recipe at a Time.</p>
   </div>
 </div>
 
+  <div class="description"><p>Bookmark and comment on your favorite recipes, creating a personalized collection of culinary magic. Keep your kitchen grimoire organized and accessible, all in one place.</p></div>
 <div class="container">
   <div class="list">
     <% @categories.each do |category| %>
       <%= link_to category_path(category), class: "link" do %>
         <div class="card">
           <div class="gradient"></div>
-          <% if category.bookmarks.exists? %>
+          <% if category.image.present? %>
+            <%= image_tag "#{category.image}", class: "img card-image" %>
+          <% elsif category.bookmarks.exists? %>
             <% first_bookmark = category.bookmarks.first %>
               <% if first_bookmark.recipe.present? %>
-                <%= image_tag first_bookmark.recipe.image_url, class: "card-image" %>
-              <% else %>
-                <%= image_tag "placeholder.png", class: "card-image" %> <!-- Fallback image -->
+                <%= image_tag first_bookmark.recipe.image_url, class: "img card-image" %>
               <% end %>
-            <% end %>
+          <% else %>
+                <%# <%= image_tag "placeholder.png", class: "card-image" %> <!-- Fallback image -->
+              <%= image_tag default_category_image(category.name), class: "img card-image" %>
+          <% end %>
             <div class="card-contents">
           <h2><%= category.name %></h2></div>
         </div>
@@ -28,4 +32,4 @@
     <% end %>
   </div>
 </div>
-<%= link_to "Create New Category", new_category_path,  class: "button" %>
+<%= link_to "Create New Category", new_category_path,  class: "button new-button" %>

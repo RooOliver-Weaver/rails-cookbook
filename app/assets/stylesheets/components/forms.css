@@ -1,0 +1,27 @@
+.form {
+  background-color: #26343a;
+  margin-right: 20px;
+  height: 125px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.new-form {
+  display: flex;
+  /* justify-content: center; Center horizontally */
+  /* align-items: center; Center vertically */
+  flex-direction: column;
+  gap: 20px;/* Stack form elements vertically */
+  margin: 2rem auto;
+  max-width: 500px;/* Optional: Limit the form width */
+  padding: 1rem;
+  background: #26343a; /* Optional: Add background color */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+.form-item {
+  margin-bottom: 10px;
+}

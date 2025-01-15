@@ -31,6 +31,8 @@ gem "solid_cable"
 gem "simple_form"
 
 gem 'cloudinary'
+
+gem 'active_storage_validations', '~> 0.9.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
@@ -64,3 +66,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "webpacker", "~> 5.4"

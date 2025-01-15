@@ -1,6 +1,15 @@
 <div class="banner">
   <div class="gradient"></div>
-  <%= image_tag "mainpage-banner.jpg", class: "mainpage-banner-img" %>
+  <% if @category.image.present? %>
+    <%= image_tag "#{@category.image}", class: "mainpage-banner-img" %>
+  <% elsif @category.bookmarks.exists? %>
+    <% first_bookmark = @category.bookmarks.first %>
+      <%= image_tag first_bookmark.recipe.image_url, class: "img card-image" %>
+  <% elsif @category.default_image.present? %>
+    <%= image_tag "#{@category.default_image}", class: "mainpage-banner-img" %>
+  <% else %>
+    <%= image_tag "#{default_category_image(@category.name)}", class: "mainpage-banner-img" %>
+  <% end %>
   <div class="banner-content">
     <h1><%= @category.name %></h1>
     <p>See all the delicious meals below</p>
@@ -11,11 +20,14 @@
 <div class="container">
   <div class="list">
     <% @bookmarks.each do |bookmark| %>
-      <div class="card">
-        <h3><strong><%= bookmark.recipe.name %></strong></h3>
-        <p><%= bookmark.comment %></p>
-        <p><%= bookmark.recipe.description %></p>
-        <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+      <div class="show-card">
+        <%= image_tag "#{bookmark.recipe.image_url}", class: "show-card-image" %>
+        <div class="show-card-contents">
+          <h3><strong><%= bookmark.recipe.name %></strong></h3>
+          <p><%= bookmark.comment %></p>
+          <%# <p><%= bookmark.recipe.description %></p>
+          <%= link_to "🗑️", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "button-delete" %>
+        </div>
       </div>
     <% end %>
   </div>
@@ -45,7 +57,7 @@
           </label>
         <% end %>
       </div>
-      <%= f.input :content, as: :text, label: "Your Review" %>
+      <%= f.input :content, as: :text, label: false, placeholder: "Your Review" %>
       <%# <%= f.input :rating, as: :select, collection: 0..5, label: "Rating (0 to 5)" %>
       <%= f.button :submit, "Submit Review", class: "button-submit" %>
     <% end %>

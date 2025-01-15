@@ -1,0 +1,11 @@
+development:
+  cloud_name: 'dkrdtcab0'
+  api_key: '756873544659541'
+  api_secret: '74f29XkN_0RZBphvoujrGR6eNnc'
+  secure: true
+
+production:
+  cloud_name: 'dkrdtcab0'
+  api_key: '756873544659541'
+  api_secret: '74f29XkN_0RZBphvoujrGR6eNnc'
+  secure: true

@@ -1,0 +1,51 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0 2rem; */
+  background-color: #26343a;
+  height: 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo a {
+  color: rgb(56, 28, 10);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.logo {
+  height: 38px;
+  margin-left: 10px;
+}
+
+.menu {
+  position: absolute;
+  top: 10px; /* Positions near the top */
+  right: 10px;
+  z-index: 1010; /* Ensures it stays above the image */
+}
+
+.menu ul {
+  list-style: none; /* Removes default bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Aligns menu items horizontally */
+  gap: 15px; /* Spacing between items */
+}
+
+.menu ul li a {
+  text-decoration: none; /* Removes underline from links */
+  color: #f39c12; /* White text for contrast */
+  font-size: 1rem; /* Adjusts font size */
+  transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.menu ul li a:hover {
+  color: white; /* Changes color on hover */
+}

@@ -1,6 +1,6 @@
 <div class="banner">
   <div class="gradient"></div>
-  <%= image_tag "mainpage-banner.jpg", class: "mainpage-banner-img" %>
+  <%= image_tag "banner1.jpg", class: "mainpage-banner-img" %>
   <div class="banner-content">
     <h1>Add a New Category</h1>
     <p>Think we've missed something, add it below.</p>
@@ -9,7 +9,22 @@
 
 <div class="new-form">
 <%= simple_form_for @category do |f| %>
-  <%= f.input :name, label: 'Category Name:  ' %>
+  <%= f.input :name, label: 'Category Name:', class: "form-item" %>
+  <%= f.input :image, as: :file, label: 'Upload Image (optional)', class: "form-item" %>
+  <%# <%= f.input :default_image, as: :hidden %>
+    <%# <div class="image-dropdown"> %>
+    <%# <button type="button" class="dropdown-button"> %>
+      <%# Select an Image %>
+    <%# </button> %>
+    <%# <div class="dropdown-menu"> %>
+      <%# <% @default_image_urls.each do |key, value| %>
+        <%# <div class="dropdown-option" data-image="<%= value[:url] %>
+        <%# " data-name="<%= value[:name] %>
+          <%# <%= image_tag value[:url], class: "dropdown-image" %>
+        <%# </div> %>
+      <%# <% end %>
+    <%# </div> %>
+  <%# </div> %>
   <%= f.submit 'Create Category', class: "button-create" %>
 <% end %>
 </div>

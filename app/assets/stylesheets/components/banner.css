@@ -1,0 +1,47 @@
+.banner {
+  position: relative;
+  margin-top: 40px;
+  width: 100vw;
+  height: 300px;
+  overflow: hidden;
+  left: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.gradient {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.801), transparent);
+  position: absolute;
+  top: auto;
+  left: 0;
+}
+
+.mainpage-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-content, .card-contents {
+  position: absolute; /* Allows content to be placed over the image */
+  top: 50%; /* Vertically centers content */
+  left: 50%; /* Horizontally centers content */
+  transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+  text-align: center; /* Centers text */
+  color: white; /* Ensures text is readable */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds shadow for better readability */
+}
+
+/* Banner header */
+.banner-content h1 {
+  font-size: 2.5rem; /* Adjust heading size */
+  margin: 0; /* Remove default margin */
+}
+
+/* Banner description */
+.banner-content p {
+  font-size: 1.2rem; /* Adjust description size */
+  margin: 0.5rem 0 0; /* Add spacing */
+}
