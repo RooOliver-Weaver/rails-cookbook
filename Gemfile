@@ -32,7 +32,7 @@ gem "simple_form"
 
 gem 'cloudinary'
 
-gem 'active_storage_validations', '~> 0.9.0'
+gem 'active_storage_validations', '~> 2.0.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
